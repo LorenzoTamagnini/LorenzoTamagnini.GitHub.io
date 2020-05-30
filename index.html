@@ -65,33 +65,38 @@
 <div class="container">
   <h2>Compila il seguente modulo:</h2>
   <form>
-    <div class="form-group">
-      <label for="nome">Nome:</label>
-      <input type="nome" class="form-control" id="nome" placeholder="Mario Rossi" name="nome">
-    </div>
-    <div class="form-group">
-      <label for="età">Età:</label>
-      <input type="età" class="form-control" id="età" placeholder="23" name="età">
-    </div>
-    <div class="form-group">
-      <label for="città">Città:</label>
-      <input type="città" class="form-control" id="città" placeholder="Vinooo" name="città">
-    </div>
-    <button onclick="myFunction()">Premi qui!</button>
-    <p id="demo"></p>
-    <p id="demo2"></p>
-    <p id="demo3"></p>
+	<div class="form-group">
+	  <label for="nome">Nome:</label>
+	  <input type="text" class="form-control" id="nome" placeholder="Mario Rossi" name="nome">
+	</div>
+	<div class="form-group">
+	  <label for="età">Età:</label>
+	  <input type="text" class="form-control" id="età" placeholder="10 come i tuoi cm di ca**o" name="età">
+	</div>
+	<div class="form-group">
+		<label for="città">Città:</label>
+		<input type="text" class="form-control" id="città" name="città" placeholder="Reggio Emilia">
+	</div>
+	<button class="btn btn-primary" type="button" id="bottonePersona">Premi qui!</button>
   </form>
+
+  <br> 
+  <p id="personaCreata"></p>
+  <br>
+
 </div>
+
 <script>
-    function myFunction() {
-      var x = document.getElementById("nome").value;
-      document.getElementById("demo").innerHTML = x;
-      var y = document.getElementById("età").value;
-      document.getElementById("demo2").innerHTML = y;
-      var z = document.getElementById("città").value;
-      document.getElementById("demo3").innerHTML = z;
+	const bottonePersona=document.getElementById("bottonePersona");
+	const personaCreata=document.getElementById("personaCreata");
+    function creaPersona() {
+        var nome = document.getElementById("nome").value;
+        var età = document.getElementById("età").value;
+        var città = document.getElementById("città").value;
+		personaCreata.innerHTML=`Ciao  ${nome} hai ${età} anni e abiti a ${città}, perchè non provi a imparare pianoforte?`;
     }
+
+	bottonePersona.addEventListener("click",()=>creaPersona());
 </script>
 </body>
 </html>
