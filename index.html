@@ -79,12 +79,13 @@
     </div>
     <button onclick="myFunction()">Premi qui!</button>
     <p id="demo"></p>
+    <script>
+    function myFunction() {
+      var x = document.getElementById("nome").value;
+      document.getElementById("demo").innerHTML = x;
+    }
+    </script>
   </form>
-  <script>
-  function myFunction() {
-    document.getElementById("demo").innerHTML = "Hello World";
-  }
-  </script>
 </div>
 
 </body>
