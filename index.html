@@ -71,11 +71,11 @@
 	</div>
 	<div class="form-group">
 	  <label for="età">Età:</label>
-	  <input type="text" class="form-control" id="età" placeholder="10 come i tuoi cm di ca**o" name="età">
+	  <input type="text" class="form-control" id="età" placeholder="23" name="età">
 	</div>
 	<div class="form-group">
 		<label for="città">Città:</label>
-		<input type="text" class="form-control" id="città" name="città" placeholder="Reggio Emilia">
+		<input type="text" class="form-control" id="città" name="città" placeholder="Domodossola">
 	</div>
 	<button class="btn btn-primary" type="button" id="bottonePersona">Premi qui!</button>
   </form>
@@ -93,7 +93,7 @@
         var nome = document.getElementById("nome").value;
         var età = document.getElementById("età").value;
         var città = document.getElementById("città").value;
-		personaCreata.innerHTML=`Ciao  ${nome} hai ${età} anni e abiti a ${città}, perchè non provi a imparare pianoforte?`;
+		personaCreata.innerHTML=`Ciao  ${nome} hai ${età} anni e abiti a ${città}!`;
     }
 
 	bottonePersona.addEventListener("click",()=>creaPersona());
